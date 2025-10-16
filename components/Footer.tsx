@@ -24,7 +24,8 @@ const Footer = () => {
         <Feather name="shopping-cart" size={30} color="black" />
       </View>
 
-      <View style={styles.iconContainer}>
+    <Link href='/ProfilePage'>
+    <View style={styles.iconContainer}>
         <FontAwesome6
           name="bars"
           size={24}
@@ -32,7 +33,8 @@ const Footer = () => {
           style={{ padding: 3 }}
         />
       </View>
-
+    </Link>
+      
       <View style={styles.iconContainer}>
         <Ionicons name="chatbubbles-outline" size={30} color="black" />
       </View>
