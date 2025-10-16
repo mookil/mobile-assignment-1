@@ -5,6 +5,7 @@ export const headerCardProps = [
     },
     {
         title: 'Deals for you',
+        subtitle: "Level up your set",
         images: [
             "https://www.allbarbersupply.ca/images/clippers-pro-x1-1.jpg",
             "https://www.allbarbersupply.ca/images/trimmer-luxe-1.jpg",
