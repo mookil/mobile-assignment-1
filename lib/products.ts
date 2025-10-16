@@ -51,3 +51,48 @@ export const sponsoredProps = {
     image: "https://www.barberdepots.com/wp-content/uploads/2015/09/shutterstock_421523014-e1492094419252.jpg",
     title: "Become our B2B customer",
 }
+
+export const yourOrdersProps = [
+    {
+        title: '',
+        images: [
+            'https://picsum.photos/300',
+        ]
+    }
+]
+
+export const buyAgainProps = [
+    {
+        title: 'Reorder soon',
+        images: [
+            'https://picsum.photos/300',
+        ]
+    }
+]
+
+export const subscribeSaveProps = [
+    {
+        title: '',
+        images: [
+            'https://picsum.photos/300',
+        ]
+    }
+]
+
+export const keepShoppingProps = [
+    {
+        title: '',
+        images: [
+            'https://picsum.photos/300',
+        ]
+    }
+]
+
+export const listsRegisteriesProps = [
+    {
+        title: '',
+        images: [
+            'https://picsum.photos/300',
+        ]
+    }
+]
