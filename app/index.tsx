@@ -64,23 +64,23 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   address: {
-    padding: 1,
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
     width: 100,
     borderRadius: 100,
-
+    paddingVertical: 10,
     backgroundColor: "#def1ff",
   },
   category: {
     backgroundColor: "#def1ff",
-    paddingVertical: 5,
+    paddingVertical: 10,
     paddingHorizontal: 12,
     borderRadius: 100,
   },
   categoryText: {
     fontWeight: "500",
+    fontSize: 18,
     textDecorationColor: "#0f1110",
   },
 });

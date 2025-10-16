@@ -9,41 +9,33 @@ const Footer = () => {
   const pathname = usePathname();
   return (
     <View style={styles.container}>
-      <Link
-        href={"/"}
-        style={
-          pathname === "/"
-            ? { ...styles.icon, borderTopWidth: 4, borderColor: "black" }
-            : { ...styles.icon }
-        }
-      >
-        <Feather name="home" size={24} color="black" />
-      </Link>
-      {/* <Link href={'/user'} style={pathname === '/user' ? {...styles.icon, borderTopWidth: 4, borderColor: 'black'} : {...styles.icon}}>  */}
-      <Feather
-        name="user"
-        size={24}
-        color="black"
-        style={
-          pathname === "/user"
-            ? { ...styles.icon, borderTopWidth: 4, borderColor: "black" }
-            : { ...styles.icon }
-        }
-      />
-      {/* </Link> */}
-      <Feather
-        name="shopping-cart"
-        size={24}
-        color="black"
-        style={styles.icon}
-      />
-      <FontAwesome6 name="bars" size={19} color="black" style={styles.icon} />
-      <Ionicons
-        name="chatbubbles-outline"
-        size={24}
-        color="black"
-        style={styles.icon}
-      />
+      <View style={styles.iconContainer}>
+        {pathname === "/" && <View style={styles.activeBar}></View>}
+        <Link href={"/"}>
+          <Feather name="home" size={36} color="black" />
+        </Link>
+      </View>
+
+      <View style={styles.iconContainer}>
+        <Feather name="user" size={30} color="black" />
+      </View>
+
+      <View style={styles.iconContainer}>
+        <Feather name="shopping-cart" size={30} color="black" />
+      </View>
+
+      <View style={styles.iconContainer}>
+        <FontAwesome6
+          name="bars"
+          size={24}
+          color="black"
+          style={{ padding: 3 }}
+        />
+      </View>
+
+      <View style={styles.iconContainer}>
+        <Ionicons name="chatbubbles-outline" size={30} color="black" />
+      </View>
     </View>
   );
 };
@@ -54,14 +46,23 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "center",
+    alignItems: "flex-start",
     paddingHorizontal: 20,
-    paddingBottom: 30,
+    paddingBottom: 10,
     borderTopColor: "gray",
     borderTopWidth: 1,
   },
-  icon: {
+  iconContainer: {
     paddingTop: 10,
     paddingHorizontal: 8,
+    position: "relative",
+  },
+  activeBar: {
+    position: "absolute",
+    top: 0,
+    width: 45,
+    height: 4,
+    backgroundColor: "black",
+    borderRadius: 3,
   },
 });
