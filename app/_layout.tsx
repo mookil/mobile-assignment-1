@@ -2,27 +2,34 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { Stack } from "expo-router";
 import { StyleSheet, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function RootLayout() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container} edges={["top", "left", "right"]}>
       <Header />
-      <Stack screenOptions={{ headerShown: false }} />
-      <View style={styles.footerContainer}>
-        <Footer />
+
+      <View style={styles.content}>
+        <Stack screenOptions={{ headerShown: false }} />
       </View>
-    </View>
+
+      {/* Footer inside its own SafeAreaView for bottom padding */}
+      <SafeAreaView edges={["bottom"]} style={styles.footerSafe}>
+        <Footer />
+      </SafeAreaView>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "white",
   },
-  footerContainer: {
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    right: 0,
+  content: {
+    flex: 1,
+  },
+  footerSafe: {
+    backgroundColor: "white", // to avoid transparency gaps
   },
 });
