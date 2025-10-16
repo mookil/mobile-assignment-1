@@ -4,7 +4,8 @@ import { ScrollView, StyleSheet, Text } from 'react-native'
 
 const ProfilePage = () => {
   return (
-    <ScrollView>
+    <ScrollView
+    showsVerticalScrollIndicator={false}>
       <Text>Hello, User</Text>
       <Text>Your Orders</Text>
       <ProfilePageCard/>

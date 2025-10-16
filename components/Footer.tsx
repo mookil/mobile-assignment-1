@@ -16,15 +16,18 @@ const Footer = () => {
         </Link>
       </View>
 
-      <View style={styles.iconContainer}>
-        <Feather name="user" size={30} color="black" />
-      </View>
+      <Link href='/ProfilePage'>
+        {pathname === "/ProfilePage" && <View style={styles.activeBar}></View>}
+        <View style={styles.iconContainer}>
+          <Feather name="user" size={30} color="black" />
+        </View>
+      </Link>
+      
 
       <View style={styles.iconContainer}>
         <Feather name="shopping-cart" size={30} color="black" />
       </View>
 
-    <Link href='/ProfilePage'>
     <View style={styles.iconContainer}>
         <FontAwesome6
           name="bars"
@@ -33,7 +36,7 @@ const Footer = () => {
           style={{ padding: 3 }}
         />
       </View>
-    </Link>
+
       
       <View style={styles.iconContainer}>
         <Ionicons name="chatbubbles-outline" size={30} color="black" />
