@@ -1,9 +1,11 @@
 import HeaderCard from "@/components/HomePageComponents/HeaderCard";
-import { headerCardProps } from "@/lib/products";
+import { headerCardProps, sponsoredProps, subHeaderCardProps } from "@/lib/products";
 import { user } from "@/lib/user";
+
+import SubHeaderCard from "@/components/HomePageComponents/SubHeaderCard";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import EvilIcons from "@expo/vector-icons/EvilIcons";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
   const { postalCode } = user;
@@ -15,7 +17,8 @@ export default function Index() {
     "Clippers & Trimmers",
   ];
   return (
-    <View>
+    <ScrollView contentContainerStyle={styles.container}>
+      {/* Category */}
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
@@ -38,6 +41,7 @@ export default function Index() {
         ))}
       </ScrollView>
 
+      {/* Header Cards */}
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
@@ -47,15 +51,36 @@ export default function Index() {
           <HeaderCard headerProps={props} key={index} />
         ))}
       </ScrollView>
-    </View>
+
+      {/* SubHeader Cards */}
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={styles.headerCardContainer}
+      >
+        {subHeaderCardProps.map((props, index) => (
+          <SubHeaderCard props={props} key={index} />
+        ))}
+      </ScrollView>
+
+      {/* Sponsored  */}
+      <View style={styles.sponsoredContainer}>
+        <Image source={{uri: sponsoredProps.image}} style={styles.sponsoredImage}/>
+        <Text style={styles.sponsoredTitle}>{sponsoredProps.title}</Text>
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "white",
+  },
   headerCardContainer: {
     flexDirection: "row",
     marginHorizontal: 10,
     gap: 10,
+    marginBottom: 10,
   },
   categoryContainer: {
     padding: 10,
@@ -64,23 +89,44 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   address: {
-    padding: 1,
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
     width: 100,
     borderRadius: 100,
-
+    paddingVertical: 10,
     backgroundColor: "#def1ff",
   },
   category: {
     backgroundColor: "#def1ff",
-    paddingVertical: 5,
+    paddingVertical: 10,
     paddingHorizontal: 12,
     borderRadius: 100,
   },
   categoryText: {
     fontWeight: "500",
+    fontSize: 18,
     textDecorationColor: "#0f1110",
   },
+  sponsoredContainer: {
+    borderRadius: 10,
+    height: 100,
+    overflow: 'hidden',
+    position: 'relative'
+  },
+  sponsoredImage: {
+    width: "100%",
+    height: "100%",
+    resizeMode: 'cover',
+  },
+  sponsoredTitle: {
+    position: 'absolute',
+    right: 30,
+    top: 30,
+    fontSize: 20,
+    color: 'white',
+    width: 180,
+    textAlign: 'right',
+    fontWeight: 'bold'
+  }
 });

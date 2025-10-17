@@ -5,6 +5,7 @@ export const headerCardProps = [
     },
     {
         title: 'Deals for you',
+        subtitle: "Level up your set",
         images: [
             "https://www.allbarbersupply.ca/images/clippers-pro-x1-1.jpg",
             "https://www.allbarbersupply.ca/images/trimmer-luxe-1.jpg",
@@ -18,6 +19,80 @@ export const headerCardProps = [
             "https://www.allbarbersupply.ca/images/foil-duo-1.jpg",
             "https://www.allbarbersupply.ca/images/artist-club-dx-straight-handle-cover.jpg",
             "https://www.allbarbersupply.ca/images/shears-pro-6in-1.jpg",
+        ]
+    }
+]
+
+export const subHeaderCardProps = [
+    {
+        title: "For you",
+        isSponsored: true,
+        image: "https://www.allbarbersupply.ca/images/neck-duster-1.jpg"
+    }, 
+    {
+        title: "Keep shopping for",
+        image: "https://www.allbarbersupply.ca/images/styling-razor-lavender-new-color.jpg",
+    },
+    {
+        title: "Inspired by your Lists",
+        image: "https://www.allbarbersupply.ca/images/texturizing-razor-red-handle.jpg",
+    },
+    {
+        title: "Keep shopping for",
+        image: "https://www.allbarbersupply.ca/images/mango-vera-lotion-20-oz.jpg",
+    },
+    {
+        title: "Keep shopping for", 
+        image: "https://www.allbarbersupply.ca/images/barbicide-64-1.jpg"
+    }
+]
+
+export const sponsoredProps = {
+    image: "https://www.barberdepots.com/wp-content/uploads/2015/09/shutterstock_421523014-e1492094419252.jpg",
+    title: "Become our B2B customer",
+}
+
+export const yourOrdersProps = [
+    {
+        title: '',
+        images: [
+            'https://picsum.photos/300',
+        ]
+    }
+]
+
+export const buyAgainProps = [
+    {
+        title: 'Reorder soon',
+        images: [
+            'https://picsum.photos/300',
+        ]
+    }
+]
+
+export const subscribeSaveProps = [
+    {
+        title: '',
+        images: [
+            'https://picsum.photos/300',
+        ]
+    }
+]
+
+export const keepShoppingProps = [
+    {
+        title: '',
+        images: [
+            'https://picsum.photos/300',
+        ]
+    }
+]
+
+export const listsRegisteriesProps = [
+    {
+        title: '',
+        images: [
+            'https://picsum.photos/300',
         ]
     }
 ]

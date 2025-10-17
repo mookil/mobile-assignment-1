@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 
 const HeaderCard = ({ headerProps }: { headerProps: any }) => {
-  const { title, backgroundImage, images } = headerProps;
+  const { title, backgroundImage,subtitle, images } = headerProps;
 
   const [card, setCard] = useState("firstCard");
   useEffect(() => {
@@ -30,6 +30,7 @@ const HeaderCard = ({ headerProps }: { headerProps: any }) => {
       {card === "secondCard" && (
         <View style={styles.container2}>
           <Text style={styles.title}>{title}</Text>
+          <Text style={styles.subtitle}>{subtitle}</Text>
 
           <View style={styles.imagesContainer}>
             {images.map((image: string, index: number) => (
@@ -58,15 +59,15 @@ export default HeaderCard;
 
 const styles = StyleSheet.create({
   container1: {
-    width: 200,
-    height: 300,
+    width: 250,
+    height: 400,
     borderRadius: 20,
     position: "relative",
     overflow: "hidden",
   },
   container2: {
-    width: 200,
-    height: 300,
+    width: 250,
+    height: 400,
     borderRadius: 20,
     position: "relative",
     overflow: "hidden",
@@ -75,8 +76,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#8cd0ff",
   },
   container3: {
-    width: 200,
-    height: 300,
+    width: 250,
+    height: 400,
     borderRadius: 20,
     position: "relative",
     overflow: "hidden",
@@ -86,7 +87,12 @@ const styles = StyleSheet.create({
   },
   title: {
     fontWeight: "bold",
-    fontSize: 20,
+    fontSize: 30,
+  },
+  subtitle: {
+    fontSize: 24,
+    fontWeight: '400',
+    marginBottom: 15,
   },
   backGroundImage: {
     width: "100%",
@@ -101,12 +107,12 @@ const styles = StyleSheet.create({
     bottom: 0,
     justifyContent: "flex-start",
     alignItems: "flex-start",
-    backgroundColor: "rgba(0, 0, 0, 0.4)",
+    backgroundColor: "rgba(0, 0, 0, 0.1)",
   },
   headerText: {
     color: "white",
     fontWeight: "bold",
-    fontSize: 24,
+    fontSize: 30,
     padding: 10,
     borderRadius: 10,
   },
@@ -115,7 +121,7 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     gap: 8,
     width: "100%",
-    height: 230,
+    height: 300,
     marginBottom: 2,
   },
   image: {
@@ -125,7 +131,7 @@ const styles = StyleSheet.create({
   },
   title2: {
     fontWeight: "bold",
-    fontSize: 18,
+    fontSize: 30,
   },
   bigImage: {
     width: "99%",

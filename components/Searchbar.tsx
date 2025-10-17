@@ -7,7 +7,7 @@ const SearchBar = () => {
 
   return (
     <View style={styles.container}>
-      <Feather name="search" size={18} color="#555" style={styles.icon} />
+      <Feather name="search" size={20} color="#555" style={styles.icon} />
       <TextInput
         value={search}
         onChangeText={setSearch}
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 25,
     paddingHorizontal: 12,
-    paddingVertical: Platform.OS === 'ios' ? 8 : 5,
+    paddingVertical: Platform.OS === 'ios' ? 11 : 5,
     margin: 10,
     borderWidth: 1,
     borderColor: '#333',
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   },
   input: {
     flex: 1,
-    fontSize: 16,
+    fontSize: 20,
     padding: 0,
     color: '#333',
 
