@@ -9,26 +9,27 @@ const Footer = () => {
   const pathname = usePathname();
   return (
     <View style={styles.container}>
-      <View style={styles.iconContainer}>
-        {pathname === "/" && <View style={styles.activeBar}></View>}
-        <Link href={"/"}>
-          <Feather name="home" size={36} color="black" />
-        </Link>
-      </View>
-
-      <Link href='/ProfilePage'>
-        {pathname === "/ProfilePage" && <View style={styles.activeBar}></View>}
+      <Link href={"/"}>
         <View style={styles.iconContainer}>
+          {pathname === "/" && <View style={styles.activeBar}></View>}
+          <Feather name="home" size={30} color="black" />
+        </View>
+      </Link>
+
+      <Link href="/ProfilePage">
+        <View style={styles.iconContainer}>
+          {pathname === "/ProfilePage" && (
+            <View style={styles.activeBar}></View>
+          )}
           <Feather name="user" size={30} color="black" />
         </View>
       </Link>
-      
 
       <View style={styles.iconContainer}>
         <Feather name="shopping-cart" size={30} color="black" />
       </View>
 
-    <View style={styles.iconContainer}>
+      <View style={styles.iconContainer}>
         <FontAwesome6
           name="bars"
           size={24}
@@ -37,7 +38,6 @@ const Footer = () => {
         />
       </View>
 
-      
       <View style={styles.iconContainer}>
         <Ionicons name="chatbubbles-outline" size={30} color="black" />
       </View>
