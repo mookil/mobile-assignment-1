@@ -96,3 +96,70 @@ export const listsRegisteriesProps = [
         ]
     }
 ]
+
+export const bannerProps = [
+  {
+    backgroundColor: "#0077ff",
+    title: "Get 20% off your first order",
+    subtitle: "Use code FIRST20 at checkout",
+    buttonText: "Shop Now",
+    imageSource: { uri: "https://www.allbarbersupply.ca/images/barbicide-jar-midsize.jpg" },
+  },
+  {
+    backgroundColor: "#aee48c",
+    title: "Gift Shopping Made Easy",
+    subtitle: "Find the perfect gift for everyone",
+    buttonText: "Shop Gifts",
+    imageSource: { uri: "https://www.allbarbersupply.ca/images/shears-pro-6in-1.jpg" }, 
+    },
+  {
+    backgroundColor: "#e64545",
+    title: "Start your gift shopping early",
+    subtitle: "",
+    buttonText: "Shop Gifts",
+    imageSource: { uri: "https://www.allbarbersupply.ca/images/shears-pro-6in-1.jpg" }, 
+    },
+];
+
+export const dealProps = [
+  {
+    imageSource: { uri: "https://www.allbarbersupply.ca/images/5-pack-double-edge-blades.jpg" },
+    discount: "10% off",
+    title: "Limited-time deal",
+  },
+  {
+    imageSource: { uri: "https://www.allbarbersupply.ca/images/adjustable-double-edge-razor-handle.jpg" },
+    discount: "15% off",
+    title: "Exclusive offer",
+  },
+  {
+    imageSource: { uri: "https://www.allbarbersupply.ca/images/aloe-vera-lotion-gallon.jpg" },
+    discount: "20% off",
+    title: "Best seller",
+  },
+  {
+    imageSource: { uri: "https://www.allbarbersupply.ca/images/artist-club-razor-sr-pink-folding.jpg" },
+    discount: "25% off",
+    title: "Hot deal",
+    },
+  {
+    imageSource: { uri: "https://www.allbarbersupply.ca/images/5-pack-double-edge-blades.jpg" },
+    discount: "10% off",
+    title: "Limited-time deal",
+  },
+  {
+    imageSource: { uri: "https://www.allbarbersupply.ca/images/adjustable-double-edge-razor-handle.jpg" },
+    discount: "15% off",
+    title: "Exclusive offer",
+  },
+  {
+    imageSource: { uri: "https://www.allbarbersupply.ca/images/artist-club-razor-dx-pearl-handle.jpg" },
+    discount: "20% off",
+    title: "Best seller",
+  },
+  {
+    imageSource: { uri: "https://www.allbarbersupply.ca/images/artist-club-ss-straight-handle-cover.jpg" },
+    discount: "25% off",
+    title: "Hot deal",
+  },
+];
