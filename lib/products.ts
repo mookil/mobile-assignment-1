@@ -58,41 +58,85 @@ export const yourOrdersProps = [
         images: [
             'https://picsum.photos/300',
         ]
+    },
+    {
+        title: '',
+        images: [
+            'https://picsum.photos/200',
+        ]
     }
 ]
 
 export const buyAgainProps = [
     {
+        id: 1,
         title: 'Reorder soon',
         images: [
             'https://picsum.photos/300',
+            'https://picsum.photos/200',
+            'https://picsum.photos/301',
+            'https://picsum.photos/302',
+        ]
+    },
+    {
+        id: 2,
+        title: 'Health and Fitness',
+        images: [
+            'https://picsum.photos/303',
+            'https://picsum.photos/300',
+            'https://picsum.photos/304'
         ]
     }
 ]
 
 export const subscribeSaveProps = [
     {
-        title: '',
+        title: 'Arriving Nov 7',
+        subHeader: 'Wed, Oct 29',
         images: [
-            'https://picsum.photos/300',
+            'https://picsum.photos/308',
         ]
     }
 ]
 
 export const keepShoppingProps = [
     {
-        title: '',
+        title: 'Nursery swaddling...',
+        subHeader: '1 viewed',
         images: [
-            'https://picsum.photos/300',
+            'https://picsum.photos/298',
         ]
-    }
+    },
+    {
+        title: 'Table cloth',
+        subHeader: '1 viewed',
+        images: [
+            'https://picsum.photos/299',
+        ]
+    },
+    {
+        title: 'Baby bibs',
+        subHeader: '2 viewed',
+        images: [
+            'https://picsum.photos/320',
+        ]
+    },
+    {
+        title: 'Baby bibs',
+        subHeader: '2 viewed',
+        images: [
+            'https://picsum.photos/319',
+        ]
+    },
 ]
 
 export const listsRegisteriesProps = [
     {
-        title: '',
+        title: 'Baby Registry',
+        subHeader: 'Private ● Default',
         images: [
-            'https://picsum.photos/300',
+            'https://picsum.photos/308',
+            'https://picsum.photos/307',
         ]
     }
 ]

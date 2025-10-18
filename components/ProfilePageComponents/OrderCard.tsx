@@ -2,7 +2,7 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 
-const ProfilePageCard = ({pageProps} : {pageProps: any}) => {
+const OrderCard = ({pageProps} : {pageProps: any}) => {
     const {title, images} = pageProps;
 
     let titleExists = false;
@@ -10,8 +10,6 @@ const ProfilePageCard = ({pageProps} : {pageProps: any}) => {
     if (title !== '') {
         titleExists = true;
     }
-
-
 
   return (
     <View style={styles.container}>
@@ -26,20 +24,16 @@ const ProfilePageCard = ({pageProps} : {pageProps: any}) => {
                 <Text></Text> }
                 
             </View>
-
-            <View style={styles.multipleImageContainer}>
-                {images.map((picture: string, index: number) => (
-                    <Image source={{uri: picture}} key={index}
-                    style={styles.image}/>
-                ))}
-            </View>  
+            
+            <Image source={{uri: images[0]}} 
+            style={styles.image} />
         </View>
     </View>
     
   )
 }
 
-export default ProfilePageCard
+export default OrderCard
 
 const styles = StyleSheet.create({
     container: {
@@ -50,6 +44,7 @@ const styles = StyleSheet.create({
     },
     imageContainer: {
         flexDirection: 'column',
+        flex: 1,
         margin: 10,
         paddingTop: 20,
         borderWidth: 2,
@@ -60,8 +55,8 @@ const styles = StyleSheet.create({
     },
     image: {
         flex: 1,
-        height: 100,
-        width: 100,
+        height: 150,
+        width: 200,
         margin: 10,
         borderRadius: 10,
 
@@ -72,12 +67,6 @@ const styles = StyleSheet.create({
     },
     headerContainer: {
         flexDirection: 'row',
-        justifyContent: 'space-between', 
-    },
-    multipleImageContainer: {
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-        width: 300,
-
+        justifyContent: 'space-between',
     }
 })
