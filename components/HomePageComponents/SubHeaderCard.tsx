@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'gray',
     padding: 9,
+    overflow: 'hidden'
   },
   title: {
     fontSize: Platform.OS === 'android' ? 18 : 20,

@@ -73,15 +73,6 @@ export default function Index() {
         ))}
       </ScrollView>
 
-      {/* Sponsored  */}
-      <View style={styles.sponsoredContainer}>
-        <Image
-          source={{ uri: sponsoredProps.image }}
-          style={styles.sponsoredImage}
-        />
-        <Text style={styles.sponsoredTitle}>{sponsoredProps.title}</Text>
-      </View>
-
       {/* Banners */}
       <View style={styles.bannerContainer}>
         {bannerProps.map((props, index) => (
@@ -98,6 +89,15 @@ export default function Index() {
           ))}
         </View>
       </ScrollView>
+
+      {/* Sponsored  */}
+      <View style={styles.sponsoredContainer}>
+        <Image
+          source={{ uri: sponsoredProps.image }}
+          style={styles.sponsoredImage}
+        />
+        <Text style={styles.sponsoredTitle}>{sponsoredProps.title}</Text>
+      </View>
     </ScrollView>
   );
 }
