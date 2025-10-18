@@ -1,3 +1,4 @@
+import AlertButton from "@/components/AlertButton";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { Stack } from "expo-router";
@@ -11,6 +12,7 @@ export default function RootLayout() {
 
       <View style={styles.content}>
         <Stack screenOptions={{ headerShown: false }} />
+        <AlertButton />
       </View>
 
       {/* Footer inside its own SafeAreaView for bottom padding */}
