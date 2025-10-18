@@ -6,16 +6,18 @@ const Banner = ({ props }: { props: any }) => {
 
   return (
     <TouchableOpacity style={[styles.container, { backgroundColor }]}>
-      <View style={styles.textContainer}>
-        <Text style={styles.title}>{title}</Text>
-        {subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
-        {buttonText && <Text style={styles.button}>{buttonText}</Text>}
-      </View>
-      {imageSource && (
-        <View style={styles.imageContainer}>
-          <Image source={imageSource} style={styles.image} />
+      <View style={styles.contentWrapper}>
+        <View style={styles.textContainer}>
+          <Text style={styles.title}>{title}</Text>
+          {subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
+          {buttonText && <Text style={styles.button}>{buttonText}</Text>}
         </View>
-      )}
+        {imageSource && (
+          <View style={styles.imageContainer}>
+            <Image source={imageSource} style={styles.image} />
+          </View>
+        )}
+      </View>
     </TouchableOpacity>
   );
 };
@@ -24,36 +26,45 @@ export default Banner;
 
 const styles = StyleSheet.create({
   container: {
+    marginVertical: 2,
+    marginHorizontal: 0,
+    borderRadius: 0,
+    overflow: "hidden",
+  },
+  contentWrapper: {
     flexDirection: "row",
-    padding: 20,
-    marginVertical: 8,
-    marginHorizontal: 12,
-    borderRadius: 8,
     alignItems: "center",
     justifyContent: "space-between",
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    minHeight: 100,
   },
   textContainer: {
     flex: 1,
+    paddingRight: 12,
   },
   title: {
-    fontSize: 24,
+    fontSize: 18,
     fontWeight: "bold",
     color: "white",
-    marginBottom: 8,
+    marginBottom: 4,
   },
   subtitle: {
-    fontSize: 16,
+    fontSize: 13,
     color: "white",
-    marginBottom: 8,
+    marginTop: 2,
   },
   button: {
-    fontSize: 16,
+    fontSize: 13,
     color: "white",
     textDecorationLine: "underline",
+    marginTop: 2,
   },
   imageContainer: {
-    width: 120,
-    height: 100,
+    width: 80,
+    height: 70,
+    justifyContent: "center",
+    alignItems: "center",
   },
   image: {
     width: "100%",
