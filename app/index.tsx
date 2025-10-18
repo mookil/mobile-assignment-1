@@ -1,8 +1,9 @@
 import HeaderCard from "@/components/HomePageComponents/HeaderCard";
 import {
+  bannerProps, dealProps,
   headerCardProps,
   sponsoredProps,
-  subHeaderCardProps,
+  subHeaderCardProps
 } from "@/lib/products";
 import { user } from "@/lib/user";
 
@@ -13,8 +14,8 @@ import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 
 import Banner from "@/components/HomePageComponents/Banner";
 import DealCard from "@/components/HomePageComponents/DealCard";
-import { bannerProps } from "@/lib/products";
-import { dealProps } from "@/lib/products";
+
+
 
 export default function Index() {
   const { postalCode } = user;
@@ -72,6 +73,15 @@ export default function Index() {
         ))}
       </ScrollView>
 
+      {/* Sponsored  */}
+      <View style={styles.sponsoredContainer}>
+        <Image
+          source={{ uri: sponsoredProps.image }}
+          style={styles.sponsoredImage}
+        />
+        <Text style={styles.sponsoredTitle}>{sponsoredProps.title}</Text>
+      </View>
+
       {/* Banners */}
       <View style={styles.bannerContainer}>
         {bannerProps.map((props, index) => (
@@ -88,15 +98,6 @@ export default function Index() {
           ))}
         </View>
       </ScrollView>
-
-      {/* Sponsored  */}
-      <View style={styles.sponsoredContainer}>
-        <Image
-          source={{ uri: sponsoredProps.image }}
-          style={styles.sponsoredImage}
-        />
-        <Text style={styles.sponsoredTitle}>{sponsoredProps.title}</Text>
-      </View>
     </ScrollView>
   );
 }
