@@ -1,6 +1,6 @@
 import Foundation from '@expo/vector-icons/Foundation';
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, Platform, StyleSheet, Text, View } from "react-native";
 
 const SubHeaderCard = ({ props }: { props: any }) => {
   const { title, image, isSponsored } = props;
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     padding: 9,
   },
   title: {
-    fontSize: 20,
+    fontSize: Platform.OS === 'android' ? 18 : 20,
     fontWeight: "bold",
   },
   image: {

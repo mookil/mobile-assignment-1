@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const DealCard = ({ props }: { props: any }) => {
   const { imageSource, discount, title } = props;
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 4,
-    marginRight: 8,
+    marginRight: Platform.OS ==='android' ? 8 : 5,
   },
   discountText: {
     color: "white",

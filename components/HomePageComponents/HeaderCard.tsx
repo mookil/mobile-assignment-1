@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     gap: 8,
     width: "100%",
-    height: 300,
+    height: "76%",
     marginBottom: 2,
   },
   image: {
